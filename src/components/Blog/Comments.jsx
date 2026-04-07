@@ -28,7 +28,9 @@ function Comments() {
             name: comment.name,
             body: comment.content
         })
-        .then((res) => console.log(res));
+        .then((res) => {
+            setCommentList([...commentList, res.data]);
+        });
     };
 
     return (
