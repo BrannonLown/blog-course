@@ -1,0 +1,21 @@
+.commentElem {
+    background-color: rgb(68, 1, 50);
+    border-left: 15px solid magenta;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 12px;
+}
+
+.commentHeader {
+    color: gold;
+    font-size: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.commentBody {
+    color: rgb(255, 132, 0);
+    font-size: 25px;
+    padding-top: 2px;
+    margin-top: 0px;
+}

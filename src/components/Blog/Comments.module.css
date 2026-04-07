@@ -1,0 +1,60 @@
+.leaveComment {
+    background-color: #ff00cc;
+    text-transform: uppercase;
+    text-align: center;
+}
+.commentZone {
+    background-color: black;
+    color: gold;
+    padding-top: 20px;
+    border: 2px solid magenta;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+.addCommentArea {
+    display: block;
+    width: 97%;
+    height: 80px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(71, 0, 66);
+    color: gold;
+    border: 2px solid gold;
+}
+.addNameArea {
+    display: block;
+    width: 97%;
+    height: 30px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgb(71, 0, 66);
+    color: gold;
+    border: 2px solid gold;
+}
+
+.button {
+    display: block;
+    margin-top: 10px, auto;
+    padding: 8px 50px;
+    margin-left: 20px;
+    background-color: rgb(85, 2, 85);
+    color: gold;
+
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.commentList {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+.commentElem {
+    background-color: rgb(68, 1, 50);
+    border-left: 15px solid magenta;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}

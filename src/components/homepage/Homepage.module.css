@@ -1,0 +1,12 @@
+.image{
+    display: block;
+    width: 100%;
+    max-width: 90vw;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    height: auto;
+    background-color: rgb(68, 1, 50);
+    padding-left: 5vw;
+    padding-right: 5vw;
+    
+}
