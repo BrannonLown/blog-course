@@ -5,7 +5,7 @@ function IndividualComment({ value }) {
   return (
     <div className = {style.commentElem}>
         <p className = {style.commentHeader}>By User: {value.name}</p>
-        <p className = {style.commentBody}>{value.content}</p>
+        <p className = {style.commentBody}>{value.body}</p>
     </div>
   )
 }
