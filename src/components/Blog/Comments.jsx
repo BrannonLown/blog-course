@@ -28,8 +28,15 @@ function Comments() {
             name: comment.name,
             body: comment.content
         })
-        .then((res) => {
-            setCommentList([...commentList, res.data]);
+        .then(() => {
+            const newComment = {
+                name: comment.name,
+                body: comment.content
+            };
+
+            setCommentList((prev) => [...prev, newComment]);
+
+            setComment({ name: "", content: "" });
         });
     };
 
