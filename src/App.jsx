@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/posts" element={<PostList />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
       </Routes>
 
