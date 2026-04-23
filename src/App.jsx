@@ -4,6 +4,7 @@ import IndividualBlogPost from './components/Blog/IndividualBlogPost';
 import ContactPage from './components/contact/ContactPage';
 import PostList from './components/postList/PostList';
 import Homepage from './components/homepage/Homepage';
+import Login from './components/login/Login';
 
 
 function App() {
