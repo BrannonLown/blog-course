@@ -1,0 +1,13 @@
+.LoginPage{
+    background-color:rgb(95, 10, 105);
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.InputInfo{
+    background-color: rgb(68, 1, 50);
+    border-left: 15px solid magenta;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    border-radius: 12px;
+}
