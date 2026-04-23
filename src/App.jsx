@@ -5,18 +5,21 @@ import ContactPage from './components/contact/ContactPage';
 import PostList from './components/postList/PostList';
 import Homepage from './components/homepage/Homepage';
 import Login from './components/login/Login';
+import { AuthProvider } from './components/authWrapper/AuthProvider';
 
 
 function App() {
   return(
     <div>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/posts" element={<PostList />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
-      </Routes>
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/posts" element={<PostList />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
+        </Routes>
+      </AuthProvider>
 
     </div>
   );
