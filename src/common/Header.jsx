@@ -21,7 +21,6 @@ function Header() {
                         <Link to="/contact" className={styles.navItem}>Contact</Link>
                     </li>
                     <li>
-                        {/*<Link to="/login" className={styles.navItem}>Login</Link>*/}
                         {username ? <Link className={styles.navItem} onClick={logout}>Logout</Link> : <Link to="/login" className={styles.navItem}>Login</Link>}
                     </li>
                 </ul>
