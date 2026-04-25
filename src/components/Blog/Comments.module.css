@@ -58,3 +58,9 @@
     padding-top: 20px;
     padding-bottom: 15px;
 }
+
+.NotAvailable {
+    background-color:rgb(71, 0, 66);
+    padding: 20px;
+    border-radius: 20px;
+}

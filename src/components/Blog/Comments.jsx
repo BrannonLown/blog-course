@@ -4,35 +4,32 @@ import { useToggle } from '../../hooks/useToggle'
 import IndividualComment from './IndividualComment'
 import { useParams } from 'react-router';
 import axios from 'axios';
+import { useUsername } from '../authWrapper/AuthContext';
 
 function Comments() {
 
     const params = useParams();
     console.log(params.post_id)
+    const username = useUsername();
 
     const [comment, setComment] = useState({
-        name: "",
         content: ""
     });
     const [show, toggleShow] = useToggle();
 
     const [commentList, setCommentList] = useState([]);
-    
-    // const addComment = (comment) => {
-    //     setCommentList([...commentList, comment])
-    // };
 
     const postComment = () => {
         axios
         .post(`https://jsonplaceholder.typicode.com/posts/${params.post_id}/comments`, {
-            name: comment.name,
+            name: username,
             body: comment.content
         })
         .then((res) => {
             console.log(res);
             
             const newComment = {
-                name: comment.name,
+                name: username,
                 body: comment.content
             };
             setCommentList((prev) => [...prev, newComment]);
@@ -41,23 +38,23 @@ function Comments() {
 
     return (
         <div className={style.commentZone}>
-            <h2 className={style.leaveComment}>Leave Comment</h2>
-            <input 
-                value={comment.name}
-                onChange={(e) => setComment({...comment, name: e.target.value})}
-
-                placeholder="Username"
-                className={style.addNameArea} 
-            ></input>
-            <textarea 
-                value={comment.content}
-                onChange={(e) => setComment({...comment, content: e.target.value})}
-                className={style.addCommentArea} 
-                placeholder="Add a comment"></textarea>
-            <button 
-                onClick={postComment}
-                className={style.button} 
-                type='submit'>Submit</button>
+            {username ? 
+                <div>
+                    <h2 className={style.leaveComment}>Leave Comment</h2>
+                    <textarea 
+                        value={comment.content}
+                        onChange={(e) => setComment({...comment, content: e.target.value})}
+                        className={style.addCommentArea} 
+                        placeholder="Add a comment"></textarea>
+                    <button 
+                        onClick={postComment}
+                        className={style.button} 
+                        type='submit'>Submit</button>
+                </div>
+                :
+                <p className={style.NotAvailable}>Commenting not available for Travellers, become a Stand User to leave a comment!</p>
+            }
+            
             <h3>Comment Section:</h3>
             <button onClick={toggleShow} className={style.button}>
                 Show Comments

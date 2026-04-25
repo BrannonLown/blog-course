@@ -34,7 +34,7 @@ function Login() {
                         type="password"
                         onChange={(e) => setUserData({...userData, password: e.target.value})}
                     />
-                    <button type="submit" className={style.LoginSubmitButton}> Submit </button>
+                    <button type="submit" className={style.LoginSubmitButton}> Login </button>
                 </form>
             </div>
             <Footer />
