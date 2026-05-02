@@ -3,9 +3,12 @@ import Header from '../../common/Header'
 import Footer from '../../common/Footer'
 import style from './Login.module.css'
 import { useAuth } from '../authWrapper/AuthContext';
+import { useNavigate } from 'react-router';
+
 
 function Login() {
     const {login} = useAuth();
+    const navigate = useNavigate();
     const [userData, setUserData] = useState({
         username: '',
         password: '',
@@ -14,6 +17,7 @@ function Login() {
         e.preventDefault();
         //console.log(userData);
         login(userData.username);
+        navigate("/");
     }
     return (
         <div>
